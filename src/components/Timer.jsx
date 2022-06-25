@@ -1,6 +1,9 @@
 import React from 'react'
 import { buildStyles, CircularProgressbar } from 'react-circular-progressbar'
 import 'react-circular-progressbar/dist/styles.css'
+import PauseBtn from './PauseBtn'
+import PlayBtn from './PlayBtn'
+import SettingsBtn from './SettingsBtn'
 
 const red = '#f54e4e'
 const green = '#4aec8c'
@@ -19,7 +22,13 @@ const Timer = () => {
 					tailColor: 'rgba(255,255,255,0.2)',
 				})}
 			/>
-			<i className='fas fa-play-circle'></i>
+			<div className='mt-20' style={{ marginTop: '20px' }}>
+				<PlayBtn />
+				<PauseBtn />
+			</div>
+			<div className='mt-20'>
+				<SettingsBtn />
+			</div>
 		</div>
 	)
 }
