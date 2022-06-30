@@ -75,26 +75,29 @@ const Timer = () => {
 
 	return (
 		<div>
-			<CircularProgressbar
-				// value={60}
-				value={percentage}
-				// text={`60%`}
-				text={minutes + ':' + seconds}
-				styles={buildStyles({
-					textColor: '#fff',
-					patchColor: mode === 'work' ? red : green,
-					tailColor: 'rgba(255,255,255,0.2)',
-				})}
-			/>
+			<div className='mb-2'>
+				<SettingsBtn onClick={() => settings.setShowSettings(true)} />
+			</div>
+			<div className='p-2'>
+				<CircularProgressbar
+					// value={60}
+					value={percentage}
+					// text={`60%`}
+					text={minutes + ':' + seconds}
+					styles={buildStyles({
+						textColor: '#fff',
+						patchColor: mode === 'work' ? red : green,
+						tailColor: 'rgba(255,255,255,0.2)',
+					})}
+				/>
+			</div>
+
 			<div className='mt-20'>
 				{isPaused ? (
 					<PlayBtn onClick={handlePlayBtn} />
 				) : (
 					<PauseBtn onClick={handlePauseBtn} />
 				)}
-			</div>
-			<div className='mt-20'>
-				<SettingsBtn onClick={() => settings.setShowSettings(true)} />
 			</div>
 		</div>
 	)

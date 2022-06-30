@@ -1,0 +1,8 @@
+Todos   22.6.30
+Clone https://pomofocus.io/
+play beep sounds when session ends
+Add at least on feature
+
+
+
+

@@ -10,7 +10,7 @@ function App() {
 	const [breakMinutes, setBreakMinutes] = useState(15)
 
 	return (
-		<main>
+		<main className='container'>
 			<SettingsContext.Provider
 				value={{
 					showSettings,

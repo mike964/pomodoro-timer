@@ -10,6 +10,9 @@ const Settings = () => {
 
 	return (
 		<div style={{ textAlign: 'left' }}>
+			<div className='center mt-20'>
+				<BackBtn onClick={() => settings.setShowSettings(false)} />
+			</div>
 			<label>work: {settings.workMinutes}:00</label>
 			<ReactSlider
 				className={'slider'}
@@ -30,9 +33,6 @@ const Settings = () => {
 				min={1}
 				max={120}
 			/>
-			<div className='center mt-20'>
-				<BackBtn onClick={() => settings.setShowSettings(false)} />
-			</div>
 		</div>
 	)
 }
