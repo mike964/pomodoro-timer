@@ -1,8 +1,8 @@
 import React from 'react'
 
-const PauseBtn = () => {
+const PauseBtn = props => {
 	return (
-		<button>
+		<button {...props}>
 			<i className='fa-solid fa-circle-pause'></i>
 		</button>
 	)
