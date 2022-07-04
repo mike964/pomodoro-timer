@@ -12,6 +12,8 @@ const green = '#4aec8c'
 const Timer = ({ setActivity }) => {
 	const settings = useContext(SettingsContext)
 
+	const audioEl = useRef(null)
+
 	const [isPaused, setIsPaused] = useState(true)
 	const [mode, setMode] = useState('work') // work, break, null
 	const [secondsLeft, setSecondsLeft] = useState(0)
@@ -65,6 +67,7 @@ const Timer = ({ setActivity }) => {
 	if (seconds < 10) seconds = '0' + seconds
 
 	const handlePlayBtn = () => {
+		audioEl.current.play()
 		setIsPaused(false)
 		isPausedRef.current = false
 	}
@@ -75,6 +78,10 @@ const Timer = ({ setActivity }) => {
 
 	return (
 		<div>
+			<audio
+				//src={props.songs[props.currentSongIndex].src}
+				src='./audio/mouse_click.mp3'
+				ref={audioEl}></audio>
 			<div className='mb-2'>
 				<SettingsBtn onClick={() => settings.setShowSettings(true)} />
 			</div>
