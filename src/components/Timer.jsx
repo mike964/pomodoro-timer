@@ -9,7 +9,7 @@ import SettingsBtn from './SettingsBtn'
 const red = '#f54e4e'
 const green = '#4aec8c'
 
-const Timer = () => {
+const Timer = ({ setActivity }) => {
 	const settings = useContext(SettingsContext)
 
 	const [isPaused, setIsPaused] = useState(true)
@@ -78,7 +78,7 @@ const Timer = () => {
 			<div className='mb-2'>
 				<SettingsBtn onClick={() => settings.setShowSettings(true)} />
 			</div>
-			<div className='p-2'>
+			<div className='p-2 mb-2'>
 				<CircularProgressbar
 					// value={60}
 					value={percentage}
@@ -99,6 +99,7 @@ const Timer = () => {
 					<PauseBtn onClick={handlePauseBtn} />
 				)}
 			</div>
+			<button onClick={() => setActivity('main')}>set time</button>
 		</div>
 	)
 }

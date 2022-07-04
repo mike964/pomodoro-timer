@@ -9,7 +9,7 @@ body {
 }
 main {
 	padding-top: 50px;
-	max-width: 340px;
+	max-width: 360px;
 	margin: 0 auto;
 	text-align: center;
 }
@@ -45,19 +45,6 @@ label {
 	text-transform: capitalize;
 }
 
-.mb-1 {
-	margin-bottom: 10px;
-}
-.mb-2 {
-	margin-bottom: 20px;
-}
-.mt-1 {
-	margin-top: 10px;
-}
-.mt-2 {
-	margin-top: 20px;
-}
-
 .center {
 	text-align: center;
 }
@@ -66,16 +53,10 @@ i {
 	font-size: 2rem;
 }
 
-.container {
+.app-container {
 	background-color: #485166;
+	height: 700px;
 	padding: 1rem;
 	margin-top: 20px;
 	border-radius: 0.5rem;
-}
-
-.p-1 {
-	padding: 0.5rem;
-}
-.p-2 {
-	padding: 1rem;
 }
