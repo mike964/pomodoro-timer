@@ -3,6 +3,7 @@ import ReactSlider from 'react-slider'
 import SettingsContext from '../context/SettingsContext'
 import '../slider.css'
 import BackBtn from './BackBtn'
+import Switch from './Switch'
 
 const Settings = () => {
 	const settings = useContext(SettingsContext)
@@ -10,7 +11,7 @@ const Settings = () => {
 
 	return (
 		<div style={{ textAlign: 'left' }}>
-			<div className='center mt-20'>
+			<div className='center'>
 				<BackBtn onClick={() => settings.setShowSettings(false)} />
 			</div>
 			<label>work: {settings.workMinutes}:00</label>
@@ -33,6 +34,9 @@ const Settings = () => {
 				min={1}
 				max={120}
 			/>
+			<div className='m-2'>
+				<Switch label='Play background music' />
+			</div>
 		</div>
 	)
 }

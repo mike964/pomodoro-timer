@@ -7,8 +7,8 @@ import SettingsContext from './context/SettingsContext'
 
 function App() {
 	const [showSettings, setShowSettings] = useState(false)
-	const [workMinutes, setWorkMinutes] = useState(45)
-	const [breakMinutes, setBreakMinutes] = useState(15)
+	const [workMinutes, setWorkMinutes] = useState(2) // 45 - 15
+	const [breakMinutes, setBreakMinutes] = useState(1)
 	// set current activity [mainActivity, Settings, Timer]
 	// const [activity, setActivity] = useState('main')
 
