@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import ReactSlider from 'react-slider'
 import SettingsContext from '../context/SettingsContext'
-import '../slider.css'
+import '../styles/slider.css'
 import BackBtn from './BackBtn'
 import Switch from './Switch'
 
@@ -34,7 +34,7 @@ const Settings = () => {
 				min={1}
 				max={120}
 			/>
-			<div className='m-2'>
+			<div className='m-3'>
 				<Switch label='Play background music' />
 			</div>
 		</div>

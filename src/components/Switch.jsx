@@ -9,7 +9,7 @@ const Switch = ({ label }) => {
 				id='flexSwitchCheckChecked'
 				defaultChecked
 			/>
-			<label className='form-check-label' htmlFor='flexSwitchCheckChecked'>
+			<label className='form-check-label pt-1' htmlFor='flexSwitchCheckChecked'>
 				{label}
 			</label>
 		</div>
