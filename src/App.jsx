@@ -40,22 +40,7 @@ function App() {
 								setBreakMinutes,
 							}}>
 							<Routes>
-								<Route
-									path='/'
-									element={
-										<Timer
-											secondsLeft={secondsLeft}
-											setSecondsLeft={setSecondsLeft}
-											mode={mode}
-											setMode={setMode}
-											isPaused={isPaused}
-											setIsPaused={setIsPaused}
-											secondsLeftRef={secondsLeftRef}
-											modeRef={modeRef}
-											isPausedRef={isPausedRef}
-										/>
-									}
-								/>
+								<Route path='/' element={<Timer />} />
 								<Route path='/settings' element={<Settings />} />
 							</Routes>
 						</SettingsContext.Provider>
