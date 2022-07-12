@@ -11,6 +11,10 @@ function App() {
 	const [workMinutes, setWorkMinutes] = useState(25) // 45 - 15
 	const [breakMinutes, setBreakMinutes] = useState(5)
 	const [playMusic, setPlayMusic] = useState(true)
+	// by me
+	// hold minutes left in context
+	const [secondsLeft, setSecondsLeft] = useState(0)
+
 	// set current activity [mainActivity, Settings, Timer]
 	// const [activity, setActivity] = useState('main')
 
@@ -39,6 +43,9 @@ function App() {
 							breakMinutes,
 							setWorkMinutes,
 							setBreakMinutes,
+							// by me
+							secondsLeft,
+							setSecondsLeft,
 						}}>
 						{showSettings ? <Settings /> : <Timer />}
 						{/* {getActivity(activity)} */}

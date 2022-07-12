@@ -106,7 +106,6 @@ const Timer = ({ setActivity }) => {
 					<PauseBtn onClick={handlePauseBtn} />
 				)}
 			</div>
-			<button onClick={() => setActivity('main')}>set time</button>
 		</div>
 	)
 }
