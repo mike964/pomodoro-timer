@@ -10,3 +10,4 @@ use react router to sort activitys
 ====================
 Make slider increase by 5 unit   22.7.12 #DONE
 When go to setting and get back, timer should not restart
+fix problem above with router v6
