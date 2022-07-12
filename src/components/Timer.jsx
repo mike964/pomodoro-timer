@@ -9,7 +9,7 @@ import SettingsBtn from './SettingsBtn'
 const red = '#f54e4e'
 const green = '#4aec8c'
 
-const Timer = ({ setActivity }) => {
+const Timer = () => {
 	const settings = useContext(SettingsContext)
 
 	const audioEl = useRef(null)
