@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom'
 
 const BackBtn = props => {
 	return (
-		<button className={'with-text'}>
-			<Link to='/'>
+		<Link to='/'>
+			<button className={'with-text'}>
 				<i className='fa-solid fa-circle-arrow-left'></i>
-			</Link>
-		</button>
+			</button>
+		</Link>
 	)
 }
 

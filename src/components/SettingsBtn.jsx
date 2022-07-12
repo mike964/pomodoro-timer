@@ -3,12 +3,11 @@ import { Link } from 'react-router-dom'
 
 const SettingsBtn = props => {
 	return (
-		// <button {...props} className={'with-text'}>
-		<button className={'with-text'}>
-			<Link to='/settings'>
+		<Link to='/settings'>
+			<button className={'with-text'}>
 				<i className='fa-solid fa-gear'></i> Settings
-			</Link>
-		</button>
+			</button>
+		</Link>
 	)
 }
 

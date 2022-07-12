@@ -15,7 +15,7 @@ const Timer = () => {
 	const audioEl = useRef(null)
 
 	const [isPaused, setIsPaused] = useState(true)
-	const [mode, setMode] = useState('work') // work, break, null
+	const [mode, setMode] = useState(null) // work, break, null
 	const [secondsLeft, setSecondsLeft] = useState(0)
 
 	const secondsLeftRef = useRef(secondsLeft)
@@ -29,7 +29,12 @@ const Timer = () => {
 
 	useEffect(() => {
 		function switchMode() {
-			const nextMode = modeRef.current === 'work' ? 'break' : 'work'
+			const nextMode =
+				modeRef.current === null
+					? 'work'
+					: modeRef.current === 'work'
+					? 'break'
+					: 'work'
 			const nextSeconds =
 				(nextMode === 'work' ? settings.workMinutes : settings.breakMinutes) *
 				60
@@ -68,6 +73,7 @@ const Timer = () => {
 
 	const handlePlayBtn = () => {
 		audioEl.current.play()
+		setMode('work') // add by me
 		setIsPaused(false)
 		isPausedRef.current = false
 	}
@@ -85,7 +91,15 @@ const Timer = () => {
 			<div className='mb-2'>
 				<SettingsBtn onClick={() => settings.setShowSettings(true)} />
 			</div>
-			<div className='p-2 mb-2'>
+
+			<div className='p-2'>
+				{!mode && <h3>Click Start</h3>}
+				{mode === 'work' && isPaused && <h3>on Pause</h3>}
+				{mode === 'work' && !isPaused && <h3>Focus</h3>}
+				{mode === 'break' && <h3> Rest </h3>}
+			</div>
+
+			<div className='p-2 mx-auto mb-2' style={{ maxWidth: '320px' }}>
 				<CircularProgressbar
 					// value={60}
 					value={percentage}

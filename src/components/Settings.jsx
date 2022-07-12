@@ -20,7 +20,9 @@ const Settings = () => {
 					className={'slider'}
 					thumbClassName={'thumb'}
 					trackClassName={'track'}
+					// value={settings.workMinutes}
 					value={settings.workMinutes / 5}
+					// onChange={newValue => settings.setWorkMinutes(newValue)}
 					onChange={newValue => settings.setWorkMinutes(newValue * 5)}
 					min={1}
 					max={24}
@@ -30,7 +32,9 @@ const Settings = () => {
 					className={'slider green'}
 					thumbClassName={'thumb'}
 					trackClassName={'track'}
+					// value={settings.breakMinutes}
 					value={settings.breakMinutes / 5}
+					// onChange={newValue => settings.setBreakMinutes(newValue)}
 					onChange={newValue => settings.setBreakMinutes(newValue * 5)}
 					min={1}
 					max={6}
