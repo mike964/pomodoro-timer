@@ -8,8 +8,8 @@ import MusicPlayer from './components/music-player/MusicPlayer'
 
 function App() {
 	const [showSettings, setShowSettings] = useState(false)
-	const [workMinutes, setWorkMinutes] = useState(2) // 45 - 15
-	const [breakMinutes, setBreakMinutes] = useState(1)
+	const [workMinutes, setWorkMinutes] = useState(25) // 45 - 15
+	const [breakMinutes, setBreakMinutes] = useState(5)
 	const [playMusic, setPlayMusic] = useState(true)
 	// set current activity [mainActivity, Settings, Timer]
 	// const [activity, setActivity] = useState('main')
@@ -28,21 +28,26 @@ function App() {
 	// }
 
 	return (
-		<main className='app-container'>
-			<SettingsContext.Provider
-				value={{
-					showSettings,
-					setShowSettings,
-					workMinutes,
-					breakMinutes,
-					setWorkMinutes,
-					setBreakMinutes,
-				}}>
-				{showSettings ? <Settings /> : <Timer />}
-				{/* {getActivity(activity)} */}
-				<MusicPlayer />
-			</SettingsContext.Provider>{' '}
-		</main>
+		<div className='x'>
+			<div className='container'>
+				<main className='app-container'>
+					<SettingsContext.Provider
+						value={{
+							showSettings,
+							setShowSettings,
+							workMinutes,
+							breakMinutes,
+							setWorkMinutes,
+							setBreakMinutes,
+						}}>
+						{showSettings ? <Settings /> : <Timer />}
+						{/* {getActivity(activity)} */}
+					</SettingsContext.Provider>{' '}
+				</main>
+
+				{/* <MusicPlayer /> */}
+			</div>
+		</div>
 	)
 }
 

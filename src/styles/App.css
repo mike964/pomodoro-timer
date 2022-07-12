@@ -8,13 +8,12 @@ body {
 	color: #eee;
 }
 .app-container {
-	padding: 1rem 1.2rem;
-	max-width: 440px;
+	width: 440px;
 	margin: 0 auto;
+	padding: 4px;
 	text-align: center;
-	background-color: #485166;
-	min-height: 640px;
-	margin-top: 1rem;
+	background-color: #25365e;
+	min-height: 610px;
 	border-radius: 0.8rem;
 }
 

@@ -5,3 +5,8 @@ Add at least on feature
 Build header
 
 use react router to sort activitys
+
+# TODOS 
+====================
+Make slider increase by 5 unit   22.7.12 #DONE
+When go to setting and get back, timer should not restart
