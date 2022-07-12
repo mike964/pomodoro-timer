@@ -9,18 +9,20 @@ import SettingsBtn from './SettingsBtn'
 const red = '#f54e4e'
 const green = '#4aec8c'
 
-const Timer = ({ setActivity }) => {
+const Timer = ({
+	secondsLeft,
+	setSecondsLeft,
+	mode,
+	setMode,
+	isPaused,
+	setIsPaused,
+	secondsLeftRef,
+	modeRef,
+	isPausedRef,
+}) => {
 	const settings = useContext(SettingsContext)
 
 	const audioEl = useRef(null)
-
-	const [isPaused, setIsPaused] = useState(true)
-	const [mode, setMode] = useState('work') // work, break, null
-	const [secondsLeft, setSecondsLeft] = useState(0)
-
-	const secondsLeftRef = useRef(secondsLeft)
-	const isPausedRef = useRef(isPaused)
-	const modeRef = useRef(mode)
 
 	function tick() {
 		secondsLeftRef.current--
@@ -76,6 +78,12 @@ const Timer = ({ setActivity }) => {
 		isPausedRef.current = true
 	}
 
+	useEffect(() => {
+		return () => {
+			console.log('<Timer /> unmounts.')
+		}
+	}, [])
+
 	return (
 		<div>
 			<audio
@@ -106,7 +114,6 @@ const Timer = ({ setActivity }) => {
 					<PauseBtn onClick={handlePauseBtn} />
 				)}
 			</div>
-			<button onClick={() => setActivity('main')}>set time</button>
 		</div>
 	)
 }
