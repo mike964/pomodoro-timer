@@ -2,7 +2,7 @@
 	"name": "my-app",
 	"version": "0.1.0",
 	"private": true,
-	"homepage": "https://mike964.github.io/pomodoro",
+	"homepage": "https://mike964.github.io/pomodoro-timer",
 	"dependencies": {
 		"react": "^18.2.0",
 		"react-circular-progressbar": "^2.0.4",
