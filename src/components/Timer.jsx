@@ -4,12 +4,11 @@ import 'react-circular-progressbar/dist/styles.css'
 import SettingsContext from '../context/SettingsContext'
 import PauseBtn from './PauseBtn'
 import PlayBtn from './PlayBtn'
-import SettingsBtn from './SettingsBtn'
 
 const red = '#f54e4e'
 const green = '#4aec8c'
 
-const Timer = () => {
+const Timer = ({ setActivity }) => {
 	const settings = useContext(SettingsContext)
 
 	const audioEl = useRef(null)
@@ -89,7 +88,10 @@ const Timer = () => {
 				src='./audio/mouse_click.mp3'
 				ref={audioEl}></audio>
 			<div className='mb-2'>
-				<SettingsBtn onClick={() => settings.setShowSettings(true)} />
+				{/* <SettingsBtn onClick={() => settings.setShowSettings(true)} /> */}
+				<button onClick={() => setActivity('Settings')} className={'with-text'}>
+					<i className='fa-solid fa-gear'></i> Settings
+				</button>
 			</div>
 
 			<div className='p-2'>

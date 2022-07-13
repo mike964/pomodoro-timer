@@ -2,17 +2,18 @@ import React, { useContext } from 'react'
 import ReactSlider from 'react-slider'
 import SettingsContext from '../context/SettingsContext'
 import '../styles/slider.css'
-import BackBtn from './BackBtn'
 import Switch from './Switch'
 
-const Settings = () => {
+const Settings = ({ setActivity }) => {
 	const settings = useContext(SettingsContext)
 	// const settings = {}
 
 	return (
 		<div className='p-11' style={{ textAlign: 'left' }}>
 			<div className='center'>
-				<BackBtn onClick={() => settings.setShowSettings(false)} />
+				<button onClick={() => setActivity('Timer')} className={'with-text'}>
+					<i className='fa-solid fa-circle-arrow-left'></i>
+				</button>
 			</div>
 			<div className='p-3'>
 				<label>work: {settings.workMinutes}:00</label>
