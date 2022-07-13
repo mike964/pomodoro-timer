@@ -32,6 +32,7 @@ function App() {
 							}}>
 							<Routes>
 								<Route path='/' element={<Timer />} />
+								<Route path='/pomodoro' element={<Timer />} />
 								<Route path='/settings' element={<Settings />} />
 							</Routes>
 						</SettingsContext.Provider>
